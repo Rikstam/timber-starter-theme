@@ -10,6 +10,9 @@ if ( ! class_exists( 'Timber' ) ) {
 class StarterSite extends TimberSite {
 
 	function __construct() {
+		remove_action( 'wp_head', 'wp_generator' ) ;
+		remove_action( 'wp_head', 'wlwmanifest_link' ) ;
+		remove_action( 'wp_head', 'rsd_link' ) ;
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'menus' );
