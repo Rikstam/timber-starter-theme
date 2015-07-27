@@ -13,6 +13,8 @@ class StarterSite extends TimberSite {
 		remove_action( 'wp_head', 'wp_generator' ) ;
 		remove_action( 'wp_head', 'wlwmanifest_link' ) ;
 		remove_action( 'wp_head', 'rsd_link' ) ;
+		remove_action( 'wp_head', 'feed_links', 2 );
+		remove_action( 'wp_head', 'feed_links_extra', 3 );
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'menus' );
